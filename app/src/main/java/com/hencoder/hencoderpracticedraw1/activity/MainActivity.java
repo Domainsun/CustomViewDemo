@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
     MainAdapter mainAdapter = null;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) { //this sententce is test for git
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
