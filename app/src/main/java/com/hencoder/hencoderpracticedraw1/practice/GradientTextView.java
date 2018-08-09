@@ -36,7 +36,6 @@ public class GradientTextView extends TextView {
         String mTipText = getText().toString();
         mPaint.getTextBounds(mTipText, 0, mTipText.length(), mTextBound);
 
-        mTextWidth = mPaint.measureText(mTipText); // 使用 measureText 来计算宽度
         mTextWidth = mTextBound.width();
         mTextHeight = mTextBound.height(); // 使用 getTextBounds() 计算出来的高度
 
@@ -48,6 +47,8 @@ public class GradientTextView extends TextView {
 //        canvas.drawRect(0,60,mTextWidth,mTextHeight+60,mPaint);
 //        canvas.setMatrix(getMatrix());
 //        canvas.drawText(mTipText, getMeasuredWidth() / 2 - mTextBound.width() / 2, getMeasuredHeight() / 2 +   mTextBound.height()/2, mPaint);
+
+
         Log.e("text", "width:" + (getMeasuredWidth() / 2 - mTextBound.width() / 2) + "height:" + (getMeasuredHeight() / 2 + mTextBound.height() / 2));
         Log.e("text", "width:" + mTextWidth + "height:" + mTextHeight);
 
